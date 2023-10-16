@@ -1,17 +1,17 @@
 import { useContext } from "react";
 import { Avatar } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import { ThemeDispatchContext } from "../contexts/UserContext";
-import { ThemeContext, AvatarContext } from "../contexts/UserContext";
+import { ThemeContext } from "../contexts/UserContext";
 
 const Nav = () => {
   const themeDispatch = useContext(ThemeDispatchContext);
   const themeContext = useContext(ThemeContext);
-  const avatarContext = useContext(AvatarContext);
 
   function handleClick(mode) {
     console.log({ value: mode });
-    themeDispatch({ value: mode });
+    themeDispatch({ ...themeContext, value: mode });
   }
 
   return (
@@ -22,16 +22,16 @@ const Nav = () => {
         </li>
       </ul>
       <ul>
-        {/* <li>
-          <a href="#">Link</a>
+        <li>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Link</a>
-        </li> */}
+          <Link to="/form">Login</Link>
+        </li>
         <Avatar
           title="Sineka Ramamoorthy"
           alt="Itachi"
-          src={avatarContext.image}
+          src={themeContext.user.image}
           sx={{ width: 62, height: 62 }}
         />
         <li>
