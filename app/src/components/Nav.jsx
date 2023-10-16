@@ -18,7 +18,7 @@ const Nav = () => {
     <nav className="container">
       <ul>
         <li>
-          <strong>Brand</strong>
+          <strong>Sineka Ramamoorthy</strong>
         </li>
       </ul>
       <ul>
@@ -29,6 +29,7 @@ const Nav = () => {
           <a href="#">Link</a>
         </li> */}
         <Avatar
+          title="Sineka Ramamoorthy"
           alt="Itachi"
           src={avatarContext.image}
           sx={{ width: 62, height: 62 }}

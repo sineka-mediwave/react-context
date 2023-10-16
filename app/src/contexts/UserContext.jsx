@@ -8,11 +8,11 @@ const AvatarDispatchContext = createContext(undefined);
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState({
     value: "light",
-    // user: {
-    //   name: "Sineka",
-    //   image:
-    //     "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/06/itachi.jpg",
-    // },
+    user: {
+      name: "Sineka",
+      image:
+        "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/06/itachi.jpg",
+    },
   });
 
   return (
@@ -26,7 +26,6 @@ function ThemeProvider({ children }) {
 
 function UserProvider({ children }) {
   const [user, setUser] = useState({
-    Title: "Sineka Ramamoorthy",
     name: "Sineka",
     image:
       "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/06/itachi.jpg",

@@ -6,6 +6,13 @@ Context provides a way to pass data through the component tree without having to
 
 Added avator image form material UI
 
+To install css library
+
+```
+npm install @picocss/pico
+npm install @mui/material @emotion/react @emotion/styled
+```
+
 ## Reference
 
 - [React useContext](https://react.dev/reference/react/useContext)
